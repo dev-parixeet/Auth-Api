@@ -35,6 +35,7 @@ const verifyResetPasswordToken = async (req, res, next) => {
     });
     console.log(token, "-00-0-0-0-0-0-0", user);
     const verify = await jwt.verify(token, "password");
+    console.log(verify,"verify user")
 
     console.log(verify);
     req.verifiedToken = verify;
